@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TODO List Landing Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #000 50%, #fff 50%);
+        color: #fff; /* White text color */
+        display: flex;
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+        height: 100vh; /* Make the page height equal to the viewport height */
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header h1 {
+        font-size: 6rem; /* Increase the size of "TO-DO" */
+        margin: 0; /* Remove default margin */
+        animation: drop-down 1s ease; /* Apply the drop-down animation to "TO-DO" */
+    }
+
+    .header h2 {
+        font-size: 6rem; /* Increase the size of "-DO" */
+        margin: 0; /* Remove default margin */
+        animation: drop-down 1s ease;
+        color : black; /* Apply the drop-down animation to "-DO" */
+    }
+
+    .split-line {
+        background-color: #fff; /* White color for the split line */
+        width: 2px; /* Width of the split line */
+        height: 6rem; /* Height of the split line */
+        margin: 0 2rem; /* Adjust the margin to separate TO and -DO */
+    }
+
+    .view-button-container {
+        margin-top: 2rem; /* Add margin on top of the button container */
+        margin-left: 3rem;
+    }
+
+    .view-button {
+        width: 200px; /* Set the width of the button */
+        padding: 20px; /* Increase the padding of the button */
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: background-color 0.3s ease; /* Add transition effect */
+    }
+    .view-button-text{
+        font-size: 2rem;
+        text-decoration: none;
+        color: white;
+    }
+
+    .view-button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Add fade-in animation for the button */
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes drop-down {
+        from {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>TO</h1>
+        <div class="split-line"></div>
+        <h2>DO</h2>
+    </div>
+    <div class="view-button-container">
+        <div class="view-button" style="animation: fade-in 1s ease forwards;">
+            <a href="/list" class="view-button-text">View List</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
